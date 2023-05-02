@@ -2,9 +2,9 @@
 
 ## 웹 스톱워치 구현하기
 
-- **ios**
+- **ios** (참고 reference)
   - <img src="https://user-images.githubusercontent.com/106325839/235596078-0dafce73-db94-45ef-8308-96a30c21d107.png" height = "400px"> <img src="https://user-images.githubusercontent.com/106325839/235596562-a249f0c8-9d7c-401c-b1f3-1c386cbf24b8.png" height = "400px">
-- **android**
+- **android** (참고 reference)
   - <img src="https://user-images.githubusercontent.com/106325839/235596713-1260b4ba-b6f3-4eec-af8c-7e31c0d6c052.jpeg" height="400px"> <img src="https://user-images.githubusercontent.com/106325839/235596690-cc2de5d6-db42-483f-8cc6-388236e2776d.jpeg" height="400px">
 ### 요구사항
 - [ ] 시작, 중지, 리셋, 랩 버튼이 있는 타이머 표시 영역을 만들기
