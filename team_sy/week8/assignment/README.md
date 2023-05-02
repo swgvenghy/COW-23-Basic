@@ -17,3 +17,5 @@
 - [ ] 랩타임 기능 구현하기: 사용자가 현재 경과 시간에 대한 랩타임을 저장하고 나중에 볼 수 있도록 화면 상에 표시하기
   - [ ] 새로 생기는 랩타임은 위에 추가되도록 기록
 - [ ] 밀리초까지 정확한 타이머 구현하기: setInterval() 함수와 new Date() 객체를 이용하여 밀리초까지 정확한 타이머 구현하기
+  - https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+  - https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
