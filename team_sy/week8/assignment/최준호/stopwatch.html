@@ -84,29 +84,23 @@
   
   $LapOrReset.disabled = true;      //초기 랩버튼 비활성화
 
-  function formatWatch(milliseconds) {  //시계 표시하기 위한 포메팅, 밀리초/1000 = x초, 밀리초%1000 = 보여질 밀리초
+  function formatWatch(milliseconds) {  //포맷팅하기 위한 함수설정
     let totalSeconds = Math.floor(milliseconds / 1000);   
     let minutes = Math.floor(totalSeconds / 60);          
     let seconds = totalSeconds % 60;                     
     let ms = Math.floor(milliseconds % 1000 / 10);        
-    //포매팅하며 padStart(자릿수, `채울숫자`)을 이용해  포매팅
+    //padStart(자릿수, `채울숫자`)을 이용해  포매팅
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${ms.toString().padStart(2, '0')}`;
-  }
-
-  function updateTime() {
-    const currentTime = new Date().getTime();             //현재 시간 재기
-    EndTime = currentTime - startTime;                // 스톱워치 : 현재 시간 - 처음 시작 시간
-    $Watch.textContent = formatWatch(EndTime);   // 포매팅해서 화면에 띄우기.
   }
 
   function startWatch() {   // 스톱워치 시작 함수
     $LapOrReset.disabled = false
     startTime = new Date().getTime() - EndTime;
-    timerInterval = setInterval(updateTime, 10);
-  }
-
-  function stopWatch() {   // 스톱워치 중단 함수
-    clearInterval(timerInterval);
+    timerInterval = setInterval(function() {
+      const currentTime = new Date().getTime();             //현재 시간 재기
+      EndTime = currentTime - startTime;                // 스톱워치 : 현재 시간 - 처음 시작 시간
+      $Watch.textContent = formatWatch(EndTime);   
+    }, 10);
   }
 
   function addLap() {     // 랩타임 ul에 기록하기
@@ -118,15 +112,7 @@
     lapCount++;
   }
 
-  function resetStopwatch() {   //재설정 함수(초기화)
-    stopWatch();
-    EndTime = 0;
-    lapCount = 1;
-    $Watch.textContent = `00:00:00`;
-    $LapResult.innerHTML = '';
-    $LapOrReset.textContent = `랩`;
-    $LapOrReset.disabled = true;
-  }
+
 
   $StartOrReset.addEventListener(`click`,function() { 
     if($StartOrReset.textContent === `시작`) {  //시작일때 누르면 시작 -> 중단으로 변경
@@ -138,7 +124,7 @@
       $StartOrReset.className = `start`;
       $StartOrReset.textContent = `시작`;
       $LapOrReset.textContent = `재설정`;
-      stopWatch();
+      clearInterval(timerInterval);
     }
   });
 
@@ -146,10 +132,14 @@
     if($LapOrReset.textContent === `랩`) {  //랩 일때 버튼 누르면 랩타임 기록
       addLap();
     }else {                                // 재설정일때 버튼 누르면 초기화
-      resetStopwatch();
+      clearInterval(timerInterval);
+      EndTime = 0;
+      lapCount = 1;
+      $Watch.textContent = `00:00:00`;
+      $LapResult.innerHTML = '';
+      $LapOrReset.textContent = `랩`;
+      $LapOrReset.disabled = true;
     }
   });
-
-
 </script>
 </html>
