@@ -1,0 +1,154 @@
+.project_image {
+  width: 180px;
+  height: 147px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.2s linear;
+  overflow: hidden;
+}
+
+.url {
+  display: block;
+  width: 180px;
+  height: 147px;
+}
+
+.project_image:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 5px 5px gray;
+}
+
+.section_project {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.section_project h2 {
+  margin-left: 10px;
+}
+
+.notable_projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project_info {
+  font-size: 11px;
+}
+
+.project_title {
+  font-weight: 600;
+  height: 39px;
+}
+
+.project_wrapper {
+  padding: 10px;
+}
+
+.project_title {
+  font-size: 13px;
+}
+
+.project_content {
+  width: 185px;
+}
+
+.project_content a {
+  display: block;
+}
+.project_cateogory {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.project_cateogory:hover {
+  text-decoration: underline !important;
+}
+.project_achieve {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: rgb(255, 87, 87);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.popular_projects .project_wrapper {
+  display: flex;
+  width: 315px;
+  height: 88px;
+}
+.ranking {
+  padding-right: 15px;
+  font-size: 15px;
+}
+
+.popular_projects h2 {
+  font-size: 20px;
+}
+
+.popular_projects .project_image {
+  width: 108px;
+  height: 88px;
+  margin-right: 10px;
+}
+
+.popular_projects_header {
+  display: flex;
+  position: relative;
+}
+.popular_projects_header :first-child {
+  margin-left: 2px;
+}
+.popular_projects_header :first-child div {
+  margin-left: 5px;
+}
+
+.header_button {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  font-weight: 400;
+  position: absolute;
+  top: 20px;
+  right: 17px;
+  color: rgb(109, 109, 109);
+}
+
+.popular_projects .project_content {
+  width: 160px;
+}
+
+.popular_projects .project_title {
+  white-space: normal;
+  display: -webkit-box;
+
+  overflow: hidden;
+}
+
+.popular_projects_button {
+  display: flex;
+  width: 204px;
+  height: 44px;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  border: 1px solid rgb(230, 230, 230);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 8px;
+  text-align: center;
+  color: rgb(61, 61, 61);
+
+  justify-content: center;
+
+  align-items: center;
+  border-radius: 22px;
+  margin: 30px auto 0px;
+  background-color: white;
+}
+
+.popular_projects_button:hover {
+  color: rgb(61, 61, 61);
+  background: rgb(242, 242, 242);
+}
+
+.realTime {
+  font-size: 12px;
+  color: gray;
+}
