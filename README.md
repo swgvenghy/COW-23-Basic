@@ -120,9 +120,6 @@
     <td  align="center">
       <img  src="https://avatars.githubusercontent.com/u/128007622?v=4"  width="100px;"  alt=""/>
     </td>
-    <td  align="center">
-      <img  src="https://avatars.githubusercontent.com/u/63959228?v=4"  width="100px;"  alt=""/>
-    </td>
   </tr>
   <tr>
     <td align="center">
@@ -143,11 +140,6 @@
      <td align="center">
     <a href="https://github.com/taewook02">
         <div>태욱</div>
-     </a>
-   </td>
-     <td align="center">
-    <a href="https://github.com/chlwlsduq123">
-        <div>진엽</div>
      </a>
    </td>
   </tr>
